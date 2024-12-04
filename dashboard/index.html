@@ -73,7 +73,15 @@
         display: flex;
         align-items: center;
         flex-direction: column;
+        margin:10px;
         margin-top: 3em;
+        background: #ffffff;
+        border:1px solid #aeaeae;
+        padding: 1em;
+        padding-top: 4em;
+        padding-bottom: 4em;
+        border-radius: 10px;
+        box-shadow: 3px 3px 3px 1px #b6b5b5;
       }
       .wrapper .actionSection p {
         display: flex;
@@ -137,17 +145,41 @@
         padding: 16px;
       }
 
-      .card {
+      .gridBox .card {
         min-width: 350px;
         height: 400px;
-        background-color: rgb(226, 156, 247);
         border: 1px solid #ddd;
         border-radius: 8px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        text-align: center;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        flex-direction: column;
+        padding:0.5em;
+      }
+      .gridBox .card img{
+        width:93%;
+        height:55%;
+        border-radius: 8px;
+        border:2px solid #ffffff;
+        margin: auto;
+      }
+      .gridBox .card h3{
+        margin-left: 1em;
+        position:relative;
+        bottom: 7px;
+      }
+      .gridBox .card div{
+        width:100%;
+        display:flex;
+        flex-direction:row;
+        justify-content:space-between;
+        margin:2px;
+        font-size:14px;
+        color: #797474;
+        margin-left:1em;
+      }
+      .gridBox .card div span{
+        width:40%;
+        margin:1px;
       }
 
       /* For desktop mode */
@@ -173,10 +205,6 @@
         .wrapper .themeImage img {
           width: 40vw;
           height: auto;
-        }
-        .subTopic{
-            font-size: 25px;
-            font-weight: 550;
         }
       }
     </style>
@@ -208,10 +236,25 @@
     </div>
     <p class="subTopic">Featured Room</p>
     <div class="gridBox">
-      <div class="card">Card 1</div>
+      <div class="card">
+        <img src="images/r1.png" alt="Room 1" />
+        <h3>2 BHK Apartment</h3>
+        <div>
+          <span><div class="furnishStatus">Status : Furnished</div><div class="roomAddress">Address :  789 Pine Avenue, Naigaon, Dadar East</div></span>
+          <span><div class="rent">Rent : 20,000</div><div class="deposit">Deposit : 50,000</div></span>
+        </div>
+      </div><div class="card">
+        <img src="images/r1.png" alt="Room 1" />
+        <h3>2 BHK Apartment</h3>
+        <div>
+          <span><div class="furnishStatus">Status : Furnished</div><div class="roomAddress">Address :  789 Pine Avenue, Naigaon, Dadar East</div></span>
+          <span><div class="rent">Rent : 20,000</div><div class="deposit">Deposit : 50,000</div></span>
+        </div>
+      </div>
+      <!-- <div class="card">Card 1</div>
       <div class="card">Card 2</div>
       <div class="card">Card 3</div>
-      <div class="card">Card 4</div>
+      <div class="card">Card 4</div> -->
     </div>
   </body>
 </html>
