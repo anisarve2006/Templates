@@ -1,198 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Document</title>
     <style>
-            @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body{
-            padding:10px;
-            font-family: "Poppins", sans-serif;
-            font-weight: 400;
-            font-style: normal;
-        }
-        header{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-            font-size: 14px;
-            font-family: "Poppins", sans-serif;
-            font-weight: 400;
-            font-style: normal;
-            font-size: 24px;
-        }
-        header .leftSection{
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-            justify-content: center;
-        }
-        header .leftSection span{
-            display: flex;
-            margin-left:15px;
-        }
-        header .rightSection {
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-            justify-content: center;
-        }
-        header .rightSection .profile{
-            width:40px;
-            height:40px;
-            border-radius: 50%;
-            margin-left:15px;
-        }
-        .wrapper{
-            display: flex;
-            align-items:center;
-            justify-content: center; 
-        }
-        .wrapper .themeImage{
-            display: flex;
-            flex-direction: column;  
-            align-items: center;
-            color: #581752;
-            font-size: 20px;
-        }
-        .wrapper .actionSection{
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-        }
-        .wrapper .actionSection .actionButton{
-            width: 100%;
-            margin-top: 3.5em;
-            display: flex;
-            justify-content: space-between;
-        }
-        .wrapper .actionSection .actionButton #findRoomBtn{
-            width: 40%;
-            padding: 15px 25px;
-            background: #9A20A0;
-            color: #ffffff;
-            border: 2px solid #9A20A0;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s ease-in-out;
-            margin-left: 2em;
-        }
-        .wrapper .actionSection .actionButton #listRoomBtn {
-            width: 40%;
-            padding: 15px 25px;
-            color: #9A20A0;
-            border: 2px solid #9A20A0;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s ease-in-out;
-            margin-right: 2em;
-        }
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        padding: 2px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        font-size: 14px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 24px;
+      }
+      header .leftSection {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        justify-content: center;
+      }
+      header .leftSection span {
+        display: flex;
+        margin-left: 15px;
+      }
+      header .rightSection {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        justify-content: center;
+      }
+      header .rightSection .profile {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-left: 15px;
+      }
+      .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .wrapper .themeImage {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #581752;
+        font-size: 20px;
+      }
+      .wrapper .actionSection {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 3em;
+      }
+      .wrapper .actionSection p {
+        display: flex;
+        width: 90%;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+      }
 
-        .wrapper .actionSection .actionButton #findRoomBtn:hover{
-            background: #650b6a;
-            color: #fff; 
-        }
+      .wrapper .actionSection .actionButton {
+        width: 100%;
+        margin-top: 3.5em;
+        display: flex;
+        justify-content: space-between;
+      }
+      .wrapper .actionSection .actionButton #findRoomBtn {
+        width: 40%;
+        padding: 15px 25px;
+        background: #9a20a0;
+        color: #ffffff;
+        border: 2px solid #9a20a0;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease-in-out;
+        margin-left: 2em;
+      }
+      .wrapper .actionSection .actionButton #listRoomBtn {
+        width: 40%;
+        padding: 15px 25px;
+        color: #9a20a0;
+        border: 2px solid #9a20a0;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease-in-out;
+        margin-right: 2em;
+      }
 
-        .wrapper .actionSection .actionButton #listRoomBtn:hover{
-            background: #c238ad;
-            color: #ffffff;
-        }
+      .wrapper .actionSection .actionButton #findRoomBtn:hover,
+      #listRoomBtn:hover {
+        transform: translateY(-0.05em);
+        transition: 0.5s;
+        box-shadow: 1px 1px 4px 0.2px #494949;
+      }
 
+      .subTopic {
+        margin-top: 3em;
+        margin-left: 2em;
+        font-size: 25px;
+        font-weight: 550;
+        font-size: 18px;
+        font-style: normal;
+        color: #000;
+        text-align: center;
+      }
+
+      .gridBox {
+        display: flex;
+        flex-wrap: wrap; /* Allow wrapping for cards */
+        gap: 16px; /* Space between cards */
+        justify-content: center; /* Center cards horizontally */
+        padding: 16px;
+      }
+
+      .card {
+        min-width: 350px;
+        height: 400px;
+        background-color: rgb(226, 156, 247);
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* For desktop mode */
+      @media (max-width: 768px) {
+        .wrapper {
+          flex-direction: column;
+        }
+        .wrapper .themeImage img {
+          width: 70vw;
+          height: auto;
+        }
+       
+      }
+
+      /* For desktop mode */
+      @media (min-width: 769px) {
+        .wrapper {
+          width: 70vw;
+          flex-direction: row;
+          margin: auto;
+          justify-content: space-between;
+        }
+        .wrapper .themeImage img {
+          width: 40vw;
+          height: auto;
+        }
         .subTopic{
-            margin-top: 3em;
-            margin-left: 2em;
-            font-size: 18px;
-            font-weight: 500;
-            font-size: 18px;
-            font-style: normal;
-            color: #000;
+            font-size: 25px;
+            font-weight: 550;
         }
-
-        .gridBox{
-            display: flex;
-            flex-wrap: wrap; /* Allow wrapping for cards */
-            gap: 16px; /* Space between cards */
-            justify-content: center; /* Center cards horizontally */
-            padding: 16px;
-        }
-
-        .card {
-            width: 200px; /* Fixed width for each card */
-            height: 150px; /* Fixed height for each card */
-            background-color: rgb(226, 156, 247);
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        @media (max-width: 768px) {
-            .wrapper{
-                flex-direction: column;  
-            }
-            .wrapper .themeImage img {
-                width: 70vw;
-                height: auto;
-            }
-        }
-        
-        @media (min-width: 769px) {
-            .wrapper{
-                width:70vw;
-                flex-direction: row;  
-                margin:auto;
-                justify-content: space-between;
-            }
-            .wrapper .themeImage img {
-                width: 40vw;
-                height: auto;
-            }
-        }
+      }
     </style>
-</head>
-<body>
-     <header>
-        <div class="leftSection">
-            <span class="hamburger"><i class="fa-solid fa-bars"></i></span>
-            <span class="brandName">DORMATE</span>
+  </head>
+  <body>
+    <header>
+      <div class="leftSection">
+        <span class="hamburger"><i class="fa-solid fa-bars"></i></span>
+        <span class="brandName">DORMATE</span>
+      </div>
+      <div class="rightSection">
+        <span class="cartBtn"><i class="fa-solid fa-cart-shopping"></i></span>
+        <span>
+          <img class="profile" src="images/v8_3.png" alt="profile" />
+        </span>
+      </div>
+    </header>
+    <div class="wrapper">
+      <div class="themeImage">
+        <img src="images/themeImage.png" alt="Theme Image" />
+      </div>
+      <div class="actionSection">
+        <p>Ready to connect to your ideal roomate today?</p>
+        <div class="actionButton">
+          <button id="findRoomBtn">Find Room</button>
+          <button id="listRoomBtn">List Your Room</button>
         </div>
-  *      <div class="rightSection">
-            <span class="cartBtn"><i class="fa-solid fa-cart-shopping"></i></span>
-            <span>
-                <img class="profile" src="images/v8_3.png" alt="profile">
-            </span>
-        </div>
-     </header>
-     <div class="wrapper">
-         <div class="themeImage">
-            <img src="images/themeImage.png" alt="Theme Image">
-        </div>
-        <div class="actionSection">
-            <p>Ready to connect to your ideal roomate today?</p>
-            <div class="actionButton">
-                <button id="findRoomBtn">Find Room</button>
-                <button id="listRoomBtn">List Your Room</button>
-            </div>
-        </div>
-     </div>
-     <p class="subTopic">Featured Room</p>
-     <div class="gridBox">
-        <div class="card">Card 1</div>
-        <div class="card">Card 2</div>
-        <div class="card">Card 3</div>
-        <div class="card">Card 4</div>
-     </div>
-</body>
+      </div>
+    </div>
+    <p class="subTopic">Featured Room</p>
+    <div class="gridBox">
+      <div class="card">Card 1</div>
+      <div class="card">Card 2</div>
+      <div class="card">Card 3</div>
+      <div class="card">Card 4</div>
+    </div>
+  </body>
 </html>
-\7845/
