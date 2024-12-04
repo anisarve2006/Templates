@@ -69,7 +69,7 @@
             flex-direction: column;
         }
         .wrapper .actionSection .actionButton{
-            width: 130%;
+            width: 100%;
             margin-top: 3.5em;
             display: flex;
             justify-content: space-between;
@@ -98,12 +98,43 @@
 
         .wrapper .actionSection .actionButton #findRoomBtn:hover{
             background: #650b6a;
-            color: #fff;
-            
+            color: #fff; 
         }
+
         .wrapper .actionSection .actionButton #listRoomBtn:hover{
-            background: #ea48d1;
+            background: #c238ad;
             color: #ffffff;
+        }
+
+        .subTopic{
+            margin-top: 3em;
+            margin-left: 2em;
+            font-size: 18px;
+            font-weight: 500;
+            font-size: 18px;
+            font-style: normal;
+            color: #000;
+        }
+
+        .gridBox{
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping for cards */
+            gap: 16px; /* Space between cards */
+            justify-content: center; /* Center cards horizontally */
+            padding: 16px;
+        }
+
+        .card {
+            width: 200px; /* Fixed width for each card */
+            height: 150px; /* Fixed height for each card */
+            background-color: rgb(226, 156, 247);
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         @media (max-width: 768px) {
@@ -136,7 +167,7 @@
             <span class="hamburger"><i class="fa-solid fa-bars"></i></span>
             <span class="brandName">DORMATE</span>
         </div>
-        <div class="rightSection">
+  *      <div class="rightSection">
             <span class="cartBtn"><i class="fa-solid fa-cart-shopping"></i></span>
             <span>
                 <img class="profile" src="images/v8_3.png" alt="profile">
@@ -155,5 +186,13 @@
             </div>
         </div>
      </div>
+     <p class="subTopic">Featured Room</p>
+     <div class="gridBox">
+        <div class="card">Card 1</div>
+        <div class="card">Card 2</div>
+        <div class="card">Card 3</div>
+        <div class="card">Card 4</div>
+     </div>
 </body>
 </html>
+\7845/
